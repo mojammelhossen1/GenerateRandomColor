@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Source Code Pro',
+        monospace;
+}
+
+body {
+
+    width: 100vw;
+    height: 100vh;
+
+
+}
+
+.container {
+    font-size: 16px;
+    background: #000000;
+    background-size: 200% 200%;
+    background-position: 0% 0%;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    opacity: 0;
+    transition: 2s;
+    transform: scale(0, 0);
+    border-radius: 100px;
+    animation: animation 1s alternate infinite;
+}
+
+
+.output-holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: relative;
+}
+
+#hash {
+    position: absolute;
+    background: #ddd;
+    padding: 0.5rem .6rem;
+    left: 0;
+    top: 0;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.copy-btn {
+    padding: 0.5rem 1rem;
+    text-align: center;
+    border-radius: 5px;
+    margin: 0;
+    outline: none;
+    background-color: #fff;
+    color: #000000;
+    border: 0px solid #fff;
+    font-size: 14px;
+    text-transform: none;
+    cursor: pointer;
+    transition: background .3s,
+        border .3s,
+        color .3s,
+        border-radius .05s;
+    box-shadow: 3px 4px 11px 0px #0000006b;
+
+}
+
+.copy-btn:hover {
+    background-color: #fff;
+    color: #000;
+    border: 0px solid #ffffff;
+}
+
+
+
+
+span::before {
+    content: '';
+    display: block;
+    position: absolute;
+    padding: 10px;
+    background: white;
+    transform: translate(-7px, -9px) rotate(-45deg);
+    z-index: -1;
+}
+
+span {
+    content: 'copied';
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    padding: 6px 15px;
+    text-align: center;
+    border-radius: 7px;
+
+    opacity: 0;
+    font-size: 12px;
+    font-family: cursive;
+    transition: opacity .5s;
+
+}
+
+.span1 {
+    transform: translate(-38px, 45px);
+}
+
+.span2 {
+    transform: translate(-38px, 120px);
+}
+
+button {
+    padding: 1rem 3rem;
+    margin: 1rem 0;
+    outline: none;
+    background-color: #000;
+    color: #fff;
+
+    border-radius: 0.25rem;
+    font-size: 18px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: background .5s,
+        border .5s, color .5s, border-radius .5s;
+
+    box-shadow: 3px 4px 11px 0px #0000006b;
+}
+
+#change-btn {
+    border: 1px solid #fff;
+}
+
+button:hover {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #000;
+}
+
+button:active {
+    background-color: #b8b8b857;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
+}
+
+label {
+    text-align: center;
+    text-shadow: -1px -1px 0 #fffffff6,
+        1px -1px 0 #fffffff6,
+        -1px 1px 0 #fffffff6,
+        1px 1px 0 #fffffff6;
+    margin: 15px;
+}
+
+input {
+
+    background-color: #fff;
+    color: #999;
+    border: #000;
+    padding: 0.5rem 1rem;
+    text-align: left;
+    border-radius: 5px;
+    cursor: text;
+    transition: .3s;
+    box-shadow: 3px 4px 11px 0px #00000034;
+    font-size: 16px;
+
+}
+
+input:focus {
+    outline: none;
+    background-color: #fff;
+    color: #000;
+}
+
+#output {
+    padding-left: 33px;
+}
+
+#output2 {
+    text-align: center;
+}
+
+@media screen and (max-width:244px) {
+    body {
+        display: none;
+    }
+}
+
+@media screen and (max-width:330px) {
+
+    .output-holder {
+        margin-top: 40px;
+        flex-direction: column;
+    }
+
+    span {
+        display: block;
+        transform: translate(0px, -63px);
+    }
+
+    span::before {
+        transform: translate(-5px, 5px) rotate(45deg);
+    }
+
+}
+
+
+@keyframes animation {
+    0% {
+        background-position: 0% 0%;
+    }
+
+    100% {
+        background-position: 100% 100%;
+    }
+}

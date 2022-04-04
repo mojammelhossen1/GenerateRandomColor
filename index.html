@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Color Generator</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <script src="./app.js" defer></script>
+</head>
+
+<body>
+    <div class="container" id="container">
+        <h1>To get random color click the button</h1>
+        <button id="change-btn">Change Color</button>
+
+        <label for="output">HEX</label>
+        <div class="output-holder">
+            <span id="pop" class="span1">Copied</span>
+            <div class="hash" id="hash">#</div>
+            <input type="text" value="" id="output">
+            <button class="copy-btn" id="copy-btn">COPY</button>
+
+        </div>
+
+        <label for="output2">RGB</label>
+        <div class="output-holder">
+            <span id="pop2" class="span1">Copied</span>
+            <input type="text" value="rgb(0,0,0,0)" disabled id="output2">
+            <button class="copy-btn" id="copy-btn2">COPY</button>
+
+        </div>
+    </div>
+
+</body>
+
+</html>
